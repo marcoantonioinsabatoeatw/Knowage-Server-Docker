@@ -36,6 +36,9 @@ services:
       - HAZELCAST_PORT=5701
     volumes:
       - ./resources:/home/knowage/apache-tomcat/resources
+      - ./master_patch.xml:/home/knowage/apache-tomcat/webapps/knowage/WEB-INF/conf/master.xml
+
+
 
   hazelcast:
     image: hazelcast/hazelcast:5.3
